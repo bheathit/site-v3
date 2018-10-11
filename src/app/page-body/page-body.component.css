@@ -1,0 +1,14 @@
+html, body {
+    background-color: beige
+
+}
+
+.pageList {
+    
+    background-color: beige
+}
+
+.pageListItems {
+    background-color: blue; 
+    color: red;
+}

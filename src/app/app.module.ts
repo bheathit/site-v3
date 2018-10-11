@@ -1,4 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
+
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,6 +15,12 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ServicesPageComponent } from './services-page/services-page.component';
 import { LinksSetOneComponent } from './links-set-one/links-set-one.component';
+
+import { MyMaterialModule } from '../material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MateTestComponent } from './mate-test/mate-test.component'
+
 
 const routes: Routes = [
   // basic routes
@@ -35,12 +43,18 @@ const routes: Routes = [
     HomePageComponent,
     ContactPageComponent,
     ServicesPageComponent,
-    LinksSetOneComponent
+    LinksSetOneComponent,
+    MateTestComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
